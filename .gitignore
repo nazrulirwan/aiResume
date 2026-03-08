@@ -2,3 +2,5 @@
 pycache/
 .env
 backend/.env
+.env.local
+*.env
