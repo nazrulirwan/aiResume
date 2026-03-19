@@ -20,8 +20,9 @@ def add_cors_headers(response):
 def score_options():
     return "", 204
 
+#get and set api key
 def _openai_client():
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY") #get from env since we load it alr
     if not api_key or not api_key.strip():
         raise ValueError("OPENAI_API_KEY is not set. Add it to your environment or .env.")
     return OpenAI(api_key=api_key.strip())
